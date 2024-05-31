@@ -49,7 +49,41 @@ int main()
                 }
             }
         }
-        cout<<hour<<":"<<mins<<":"<<sec<<" ";
+        if(hour<=9){
+            if(mins<=9){
+                if(sec<=9){
+                    cout<<0<<hour<<":"<<0<<mins<<":"<<0<<sec<<" ";
+                }
+                else{
+                    cout<<0<<hour<<":"<<0<<mins<<":"<<sec<<" ";
+                }
+            }
+            else{
+                if(sec<=9){
+                    cout<<0<<hour<<":"<<mins<<":"<<0<<sec<<" ";
+                }
+                else{
+                    cout<<0<<hour<<":"<<mins<<":"<<sec<<" ";
+                }
+            }
+        }
+        else{
+            if(mins<=9){
+                if(sec<=9){
+                    cout<<hour<<":"<<0<<mins<<":"<<0<<sec<<" ";
+                }
+                else{
+                    cout<<hour<<":"<<0<<mins<<":"<<sec<<" ";
+                }
+            }
+            else{
+                if(sec<=9){
+                    cout<<hour<<":"<<mins<<":"<<0<<sec<<" ";
+                }
+                else{
+                    cout<<hour<<":"<<mins<<":"<<sec<<" ";
+                }
+            }        }
         if(ampm==1){
             cout<<"am"<<endl;
         }
@@ -61,4 +95,3 @@ int main()
     }
 
 }
-
